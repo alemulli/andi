@@ -1,30 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andi and Taylor's Wedding</title>
+
+    <!-- alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- tailwind css output file -->
+    <link href="./output.css" rel="stylesheet" />
+
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
-</head>
-    <div id="background"></div>
-<body>
-    <div id="app">
-        <h1>Andi and Taylor Mullin-Hay</h1>
-<h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
-<h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra quam ac vehicula egestas. Duis facilisis accumsan risus et faucibus. Proin vel imperdiet sapien. Aliquam ac ipsum dignissim, porta dolor et, egestas eros. Sed vitae feugiat sem. Suspendisse sit amet maximus sem. Phasellus sit amet est ac dolor lacinia pellentesque. Nullam laoreet lectus eget mauris posuere, ac mattis lorem vulputate. Duis non risus ullamcorper, semper dolor congue, accumsan ex. In sit amet sagittis mauris. Nunc sit amet consequat orci. Suspendisse dignissim sapien mauris, convallis dignissim leo accumsan non. Duis porta eu magna ac porta. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-<p>Donec tincidunt feugiat risus et suscipit. Proin rutrum nunc vel ornare eleifend. Morbi fermentum, velit nec faucibus gravida, mauris augue mollis ante, non tristique turpis nulla ut tortor. Quisque porttitor nisl eget turpis sagittis eleifend. Ut sit amet odio felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam quis accumsan sem. Cras condimentum pretium nisi a vulputate. Aliquam volutpat mollis turpis sagittis pretium. Nullam vestibulum ex quis porta dignissim. Pellentesque ac ante posuere, convallis diam ut, fringilla nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc convallis nisi vel auctor dictum. Curabitur nec vehicula risus. Ut ultrices semper dui, id venenatis dui posuere ac.</p>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/rabbit.png" />
+  </head>
 
-<p>Vivamus eros lacus, laoreet a metus sed, fermentum efficitur urna. Ut placerat rhoncus tristique. Fusce interdum sapien nisl, non fringilla massa consectetur eget. Fusce et suscipit felis. Nam iaculis at eros id interdum. Nunc pharetra pulvinar tempus. Mauris dignissim, lorem et consequat efficitur, ante leo egestas nisi, nec accumsan tellus nibh eu dui. Duis diam diam, aliquet id ligula et, placerat sodales dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam id lectus odio. Suspendisse at neque elementum, faucibus purus nec, vulputate ipsum. Nam tellus quam, placerat in libero a, hendrerit maximus ligula. Maecenas bibendum in orci a mollis.</p>
+  <div id="background"></div>
+  <body class="flex flex-col items-center z-10 font-custom">
+    <div class="relative w-11/12 bg-isabelline bg-opacity-60 my-5 p-5 z-10 rounded-2xl">
+        <img class="absolute top-0 left-0 z-30 h-[50px] sm:h-[100px] w-auto" src="images/gear corner.png" />
+        <img class="absolute top-0 right-0 z-30 h-[50px] sm:h-[100px] w-auto rotate-90" src="images/gear corner.png" />
+        <img class="absolute bottom-0 right-0 z-30 h-[50px] sm:h-[100px] w-auto rotate-180" src="images/gear corner.png" />
+        <img class="absolute bottom-0 left-0 z-30 h-[50px] sm:h-[100px] w-auto -rotate-90" src="images/gear corner.png" />
+      <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold text-center">Andi and Taylor Mullin-Hay</h1>
 
-<p>Vestibulum ut erat at tellus condimentum efficitur. Donec tincidunt sapien a erat mollis tristique. Integer convallis volutpat velit, vel suscipit elit. Sed at vestibulum orci. Sed hendrerit tortor eros, in hendrerit nulla varius in. In hac habitasse platea dictumst. Sed consequat tincidunt consequat. Sed lectus lorem, pulvinar vel leo ut, congue sodales tellus. Etiam a aliquam felis, id maximus nulla. In viverra lorem ultrices dignissim imperdiet. Morbi et diam lacinia, tempor nunc bibendum, tempor magna. Praesent euismod nisi at mi tempor lobortis non sed dolor. Integer nec odio leo. Vivamus dui lacus, interdum vel tellus id, maximus sollicitudin risus. Nulla ut elit nunc.</p>
+      <div x-cloak x-data="carousel()" x-init="startImageCycle()"  class="relative w-11/12 h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden m-auto rounded-2xl my-5">
+        <img
+          class="carousel-image photoFilter"
+          src="images/AT1.jpeg"
+          alt="Andi and Taylor"
+          x-show="selected === 0"
+          x-transition
+          x-transition:enter.duration.1000ms
+          x-transition:leave.duration.1000ms
+          x-cloak
+        />
+        <img
+          class="carousel-image photoFilter"
+          src="images/AT2.jpeg"
+          alt="Andi and Taylor"
+          x-show="selected === 1"
+          x-transition
+          x-transition:enter.duration.1000ms
+          x-transition:leave.duration.1000ms
+          x-cloak
+        />
+        <img
+          class="carousel-image photoFilter"
+          src="images/AT3.JPG"
+          alt="Andi and Taylor"
+          x-show="selected === 2"
+          x-transition
+          x-transition:enter.duration.1000ms
+          x-transition:leave.duration.1000ms
+          x-cloak
+        />
+        <img 
+          class="carousel-image photoFilter"
+          src="images/AT4.jpg"
+          alt="Andi and Taylor"
+          x-show="selected === 3"
+          x-transition
+          x-transition:enter.duration.1000ms
+          x-transition:leave.duration.1000ms
+          x-cloak
+        />
+        <img 
+          class="carousel-image photoFilter"
+          src="images/AT5.jpeg"
+          alt="Andi and Taylor"
+          x-show="selected === 4"
+          x-transition
+          x-transition:enter.duration.1000ms
+          x-transition:leave.duration.1000ms
+          x-cloak
+        />
+      </div>
+      <div class="p-10">
+        <a href="#" target="_blank">
+        <button>RSVP</button></a>
 
-<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras sed imperdiet lorem. Donec eu lectus erat. Curabitur volutpat enim quis nisi scelerisque hendrerit. Aliquam ac lacus ut quam vestibulum fermentum. Nulla vitae velit erat. Duis rhoncus odio et eleifend aliquam. Donec at quam bibendum eros porttitor placerat. Suspendisse quis maximus augue. Pellentesque eu ornare leo. Cras et scelerisque ipsum. Aliquam molestie lacus vel risus accumsan molestie.</p>
+      <h4>
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..."
+      </h4>
+      <h5>
+        "There is no one who loves pain itself, who seeks after it and wants to
+        have it, simply because it is pain..."
+      </h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra
+        quam ac vehicula egestas. Duis facilisis accumsan risus et faucibus.
+        Proin vel imperdiet sapien. Aliquam ac ipsum dignissim, porta dolor et,
+        egestas eros. Sed vitae feugiat sem. Suspendisse sit amet maximus sem.
+        Phasellus sit amet est ac dolor lacinia pellentesque. Nullam laoreet
+        lectus eget mauris posuere, ac mattis lorem vulputate. Duis non risus
+        ullamcorper, semper dolor congue, accumsan ex. In sit amet sagittis
+        mauris. Nunc sit amet consequat orci. Suspendisse dignissim sapien
+        mauris, convallis dignissim leo accumsan non. Duis porta eu magna ac
+        porta. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      </p>
+
+      <p>
+        Donec tincidunt feugiat risus et suscipit. Proin rutrum nunc vel ornare
+        eleifend. Morbi fermentum, velit nec faucibus gravida, mauris augue
+        mollis ante, non tristique turpis nulla ut tortor. Quisque porttitor
+        nisl eget turpis sagittis eleifend. Ut sit amet odio felis. Vestibulum
+        ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+        curae; Nullam quis accumsan sem. Cras condimentum pretium nisi a
+        vulputate. Aliquam volutpat mollis turpis sagittis pretium. Nullam
+        vestibulum ex quis porta dignissim. Pellentesque ac ante posuere,
+        convallis diam ut, fringilla nisi. Interdum et malesuada fames ac ante
+        ipsum primis in faucibus. Nunc convallis nisi vel auctor dictum.
+        Curabitur nec vehicula risus. Ut ultrices semper dui, id venenatis dui
+        posuere ac.
+      </p>
+
+      <p>
+        Vivamus eros lacus, laoreet a metus sed, fermentum efficitur urna. Ut
+        placerat rhoncus tristique. Fusce interdum sapien nisl, non fringilla
+        massa consectetur eget. Fusce et suscipit felis. Nam iaculis at eros id
+        interdum. Nunc pharetra pulvinar tempus. Mauris dignissim, lorem et
+        consequat efficitur, ante leo egestas nisi, nec accumsan tellus nibh eu
+        dui. Duis diam diam, aliquet id ligula et, placerat sodales dui. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Etiam id lectus odio. Suspendisse at neque
+        elementum, faucibus purus nec, vulputate ipsum. Nam tellus quam,
+        placerat in libero a, hendrerit maximus ligula. Maecenas bibendum in
+        orci a mollis.
+      </p>
+
+      <p>
+        Vestibulum ut erat at tellus condimentum efficitur. Donec tincidunt
+        sapien a erat mollis tristique. Integer convallis volutpat velit, vel
+        suscipit elit. Sed at vestibulum orci. Sed hendrerit tortor eros, in
+        hendrerit nulla varius in. In hac habitasse platea dictumst. Sed
+        consequat tincidunt consequat. Sed lectus lorem, pulvinar vel leo ut,
+        congue sodales tellus. Etiam a aliquam felis, id maximus nulla. In
+        viverra lorem ultrices dignissim imperdiet. Morbi et diam lacinia,
+        tempor nunc bibendum, tempor magna. Praesent euismod nisi at mi tempor
+        lobortis non sed dolor. Integer nec odio leo. Vivamus dui lacus,
+        interdum vel tellus id, maximus sollicitudin risus. Nulla ut elit nunc.
+      </p>
+
+      <p>
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras sed
+        imperdiet lorem. Donec eu lectus erat. Curabitur volutpat enim quis nisi
+        scelerisque hendrerit. Aliquam ac lacus ut quam vestibulum fermentum.
+        Nulla vitae velit erat. Duis rhoncus odio et eleifend aliquam. Donec at
+        quam bibendum eros porttitor placerat. Suspendisse quis maximus augue.
+        Pellentesque eu ornare leo. Cras et scelerisque ipsum. Aliquam molestie
+        lacus vel risus accumsan molestie.
+      </p>
+      
+</div>
+      <script>
+        const carousel = () => {
+    return {
+        selected: 0,
+        startImageCycle() {
+            // pictureCarousel = document.getElementById("picture-carousel")
+            // pictureCarousel.classList.add("opacity 0")
+            const imageChanger = window.setInterval(()=>{
+                if (this.selected === 4) {
+                    this.selected = 0
+                } else {
+                    this.selected++
+                }
+            }, 4000)
+        }
+    };
+};
+        </script>
     </div>
-</body>
+  </body>
 </html>
