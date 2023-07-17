@@ -9,7 +9,18 @@ module.exports = {
         isabelline: "#EDE8E4",
       },
       fontFamily: {
-        custom: ["Shantell Sans", "sans-serif"],
+        montSerrat: ["Montserrat", "sans-serif"],
+        styleScript: ["Style Script", "cursive"]
+      },
+      container: {
+        center: true,
+        screens: {
+          sm: "592px",
+          md: "720px",
+          lg: "976px",
+          xl: "976px",
+          "2xl": "976px",
+        },
       },
     },
   },
