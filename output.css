@@ -687,12 +687,12 @@ video {
   text-align: center;
 }
 
-.font-styleScript {
-  font-family: Style Script, cursive;
-}
-
 .font-montSerrat {
   font-family: Montserrat, sans-serif;
+}
+
+.font-styleScript {
+  font-family: Style Script, cursive;
 }
 
 .text-4xl {
