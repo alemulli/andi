@@ -38,6 +38,7 @@
     <div
       class="relative container bg-isabelline bg-opacity-60 my-5 p-5 z-10 rounded-2xl"
     >
+    <!-- Corner gear decorations -->
       <img
         class="absolute top-0 left-0 z-30 h-[50px] sm:h-[100px] w-auto"
         src="images/gear corner.png"
@@ -54,12 +55,16 @@
         class="absolute bottom-0 left-0 z-30 h-[50px] sm:h-[100px] w-auto -rotate-90"
         src="images/gear corner.png"
       />
+
+      <!-- Header -->
       <h1
         class="relative text-4xl md:text-5xl lg:text-7xl -my-5 font-extrabold text-center font-styleScript z-40 skew-x-[-20deg] text-black max-w-[80%] mx-auto text-center"
       >
         Andi and Taylor Mullin-Hay
       </h1>
 
+
+      <!-- Image Carousel -->
       <div
         x-cloak
         x-data="carousel()"
@@ -117,23 +122,24 @@
           x-cloak
         />
       </div>
-      <div class="p-10">
-        <a href="https://forms.gle/2nyyrfMzzYb8EL4RA" target="_blank">
-          <button>RSVP</button></a
-        >
-        <p>
-          This button will take you an RSVP form. Please fill this out to let us
-          know what you will be eating at our wedding!
-        </p>
 
+      <!-- Top CTA RSVP Button -->
+      <a href="https://forms.gle/2nyyrfMzzYb8EL4RA" target="_blank">
+          <button>RSVP</button></a
+          >
+          <img
+          class="h-[50px] sm:h-[100px] w-auto"
+          src="images/gear.svg"
+          />
+          
+          <div class="m-auto w-11/12">
+        <!-- Find a good quote from a song for Andi and Taylor -->
         <h4>
           "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
           consectetur, adipisci velit..."
         </h4>
-        <h5>
-          "There is no one who loves pain itself, who seeks after it and wants
-          to have it, simply because it is pain..."
-        </h5>
+
+        <!-- Love Story -->
         <p>
           Welcome to our love story! It all began at the serene pond at Bass
           Pro, where fate brought us together. With a cup of tea in hand, we
@@ -159,6 +165,19 @@
           and celebrate the beginning of forever.
         </p>
       </div>
+      <div>
+        <!-- Invitation info here! Style pretty! -->
+      </div>
+          <!-- Bottom CTA RSVP Button -->
+          <a href="https://forms.gle/2nyyrfMzzYb8EL4RA" target="_blank">
+            <button>RSVP</button></a
+          >
+
+      <p>
+        This button will take you an RSVP form. Please fill this out to let us
+        know what you will be eating at our wedding!
+      </p>
+
       <script>
         const carousel = () => {
           return {
