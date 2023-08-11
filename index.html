@@ -1,3 +1,5 @@
+<!-- class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0" data-taos-offset="300" -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +16,11 @@
 
     <!-- tailwind css output file -->
     <link href="./output.css" rel="stylesheet" />
+
+    <!-- Taos animations script -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +43,7 @@
   <div id="background"></div>
   <body class="flex flex-col items-center z-10 font-montSerrat px-4">
     <div
-      class="relative container bg-isabelline bg-opacity-60 my-5 p-5 z-10 rounded-2xl"
+      class="relative container bg-isabelline bg-opacity-60 my-5 p-5 py-10 z-10 rounded-2xl"
     >
       <!-- Corner gear decorations -->
       <img
@@ -57,13 +64,18 @@
       />
 
       <!-- Header -->
-      <h1
-        class="relative text-4xl md:text-5xl lg:text-7xl -my-5 font-extrabold text-center font-styleScript z-40 skew-x-[-20deg] text-delftBlue shadow-sm max-w-[80%] mx-auto"
-      >
-        Andi and Taylor Mullin-Hay
-      </h1>
+      <div class="text-7xl flex flex-col items-center max-w-[80%] mx-auto">
+        <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+        <h1
+          class="font-extrabold text-center font-styleScript z-40 text-delftBlue shadow-sm flex flex-row flex-wrap justify-center" style="line-height: 1.10;"
+        >
+        <div class="skew-x-[-20deg] pr-2">Andi </div><div class="skew-x-[-20deg] pr-2">and </div><div class="skew-x-[-20deg] pr-2">Taylor </div><div class="skew-x-[-20deg]">Mullin-</div><div class="skew-x-[-20deg]">Hay</div>
+          
+        </h1></div>
+      </div>
 
       <!-- Image Carousel -->
+      <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
       <div
         x-cloak
         x-data="carousel()"
@@ -120,132 +132,164 @@
           x-transition:leave.duration.1000ms
           x-cloak
         />
-      </div>
+      </div></div>
       <div class="m-auto w-11/12 flex flex-col gap-5">
         <!-- Top CTA RSVP Button -->
-        <div
-          x-data="gear()"
-          x-init="rotateGear()"
-          @mouseover="startRotation();"
-          @mouseleave="endRotation()"
-          class="relative w-full flex flex-col items-center"
-        >
-          <img
-            class="h-[200px] w-auto justify-self-center"
-            src="images/gear.svg"
-            :class="gearClass"
-          />
-          <a
-            class="absolute inset-y-1/4 flex justify-center items-center flex-grow-0 overflow-visible"
-            href="https://forms.gle/2nyyrfMzzYb8EL4RA"
-            target="_blank"
+        <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+          <div
+            class="relative w-full flex flex-col items-center transition hover:scale-110"
           >
-            <button
-              class="bg-drabDarkBrown py-3 font-styleScript text-5xl text-isabelline bg-opacity-80 hover:bg-delftBlue hover:bg-opacity-80 transition-all duration-500 flex justify-center items-center leading-none skew-x-[-20deg]"
-              style="
-                border-radius: 0.5rem;
-                padding-left: 5rem;
-                padding-right: 5rem;
-              "
+            <img
+              class="h-[200px] w-auto justify-self-center rotate-gear"
+              src="images/gear.svg"
+            />
+            <a
+              class="absolute inset-y-1/4 flex justify-center items-center flex-grow-0 overflow-visible"
+              href="https://forms.gle/2nyyrfMzzYb8EL4RA"
+              target="_blank"
             >
-              RSVP
-            </button></a
-          >
+              <button
+                class="bg-drabDarkBrown py-3 font-styleScript text-5xl text-isabelline bg-opacity-80 hover:bg-delftBlue hover:bg-opacity-80 transition-all duration-500 flex justify-center items-center leading-none skew-x-[-20deg]"
+                style="
+                  border-radius: 0.5rem;
+                  padding-left: 5rem;
+                  padding-right: 5rem;
+                "
+              >
+                RSVP
+              </button></a
+            >
+          </div>
         </div>
         <div class="flex flex-col gap-5">
-          <!-- Find a good quote from a song for Andi and Taylor -->
-          <h4>
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit..."
-          </h4>
-
+          <div
+            class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 w-max m-auto"
+            data-taos-offset="150"
+          >
+            <!-- Find a good quote from a song for Andi and Taylor -->
+            <blockquote
+              class="font-styleScript text-2xl m-auto flex flex-col items-center w-max"
+              cite="Dolly Parton"
+            >
+              <p class="skew-x-[-20deg]">"Sail away with me</p>
+              <p class="skew-x-[-20deg]">To another world</p>
+              <p class="skew-x-[-20deg]">And we rely on each other</p>
+              <p class="skew-x-[-20deg]">From one lover to another"</p>
+              <p class="self-end text-lg skew-x-[-20deg]">-- Dolly Parton</p>
+            </blockquote>
+          </div>
           <!-- Love Story -->
-          <h2 class="font-styleScript text-7xl skew-x-[-20deg] text-delftBlue shadow-sm text-center my-5"">Our love story...</h2>
-          <p>
-            Welcome to our love story! It all began at the serene pond at Bass
-            Pro, where fate brought us together. With a cup of tea in hand, we
-            instantly connected over our shared love for adventure and learning.
-            From that moment on, our journey has been a whirlwind of exploration
-            and togetherness. We've traveled to far-off lands, dived into
-            thrilling escapades, and even cruised through life on our
-            motorcycles. Along the way, we've nurtured not only our garden but
-            also the loving bond we share with our cherished pets. Our love
-            blossoms with each passing day, and we can't wait to embark on this
-            new chapter of our lives, hand in hand, forever.
-          </p>
-
-          <p>
-            Join us as we tie the knot and celebrate the love that has grown
-            from that beautiful day at the pond. Our wedding will be a
-            reflection of the adventures we've shared and the knowledge we've
-            gained side by side. It's a day where our hearts will be full of
-            love and joy, surrounded by family and friends who have supported us
-            throughout our journey. We invite you to witness our love story and
-            be a part of our future as we promise to continue exploring,
-            learning, and caring for each other and the world around us. Let's
-            make new memories together and celebrate the beginning of forever.
-          </p>
+          <h2
+            class="font-styleScript text-7xl skew-x-[-20deg] text-delftBlue shadow-sm text-center my-5 delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0"
+            data-taos-offset="150"
+          >
+            Our love story...
+          </h2>
+          <div
+            class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0"
+            data-taos-offset="150"
+          >
+            <p>
+              Welcome to our love story! It all began at the serene pond at Bass
+              Pro, where fate brought us together. With a cup of tea in hand, we
+              instantly connected over our shared love for adventure and
+              learning. From that moment on, our journey has been a whirlwind of
+              exploration and togetherness. We've traveled to far-off lands,
+              dived into thrilling escapades, and even cruised through life on
+              our motorcycles. Along the way, we've nurtured not only our garden
+              but also the loving bond we share with our cherished pets. Our
+              love blossoms with each passing day, and we can't wait to embark
+              on this new chapter of our lives, hand in hand, forever.
+            </p>
+            <br />
+            <p>
+              Join us as we tie the knot and celebrate the love that has grown
+              from that beautiful day at the pond. Our wedding will be a
+              reflection of the adventures we've shared and the knowledge we've
+              gained side by side. It's a day where our hearts will be full of
+              love and joy, surrounded by family and friends who have supported
+              us throughout our journey. We invite you to witness our love story
+              and be a part of our future as we promise to continue exploring,
+              learning, and caring for each other and the world around us. Let's
+              make new memories together and celebrate the beginning of forever.
+            </p>
+          </div>
         </div>
-        
-          <!-- Invitation info here! Style pretty! -->
-          <div class="flex flex-col gap-5">
-            <h2 class="font-styleScript text-7xl skew-x-[-20deg] text-delftBlue shadow-sm text-center my-5">You're Invited</h2>
-            <h3 class="font-styleScript text-5xl skew-x-[-20deg] text-delftBlue shadow-sm">When?</h3>
-            <div class="flex flex-col items-center">
-              <p>Saturday, November 4th, 2023</p>
-              <p>4:00 p.m. to 6:00 p.m.</p>
-            </div>
-            <hr>
-            <h3 class="font-styleScript text-5xl skew-x-[-20deg] text-delftBlue shadow-sm">Where?</h3>
-            <div class="flex flex-col items-center">
-              <p>The Lodge at Steele's Creek Park, Bristol, TN</p>
-            </div>
-            <hr>
-            <p>Dress how you want!</p>
-            <p>
-              We will have a short ceremony and then eat food afterward. Please
-              send a text to Taylor or Andi or RSVP by filling out the google
-              form at the link below.
-            </p>
-            <p>
-              Food will be provided so it's important to RSVP to get an accurate
-              head count for food.
-            </p>
-          
+
+        <!-- Invitation info here! Style pretty! -->
+        <div class="flex flex-col gap-5">
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+          <h2
+            class="font-styleScript text-7xl skew-x-[-20deg] text-delftBlue shadow-sm text-center my-5"
+          >
+            You're Invited
+          </h2></div>
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+          <h3
+            class="font-styleScript text-5xl skew-x-[-20deg] text-delftBlue shadow-sm"
+          >
+            When?
+          </h3></div>
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+          <div class="flex flex-col items-center">
+            <p>Saturday, November 4th, 2023</p>
+            <p>4:00 p.m. to 6:00 p.m.</p>
+          </div></div>
+          <hr class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150" />
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+          <h3
+            class="font-styleScript text-5xl skew-x-[-20deg] text-delftBlue shadow-sm"
+          >
+            Where?
+          </h3></div>
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+          <div class="flex flex-col items-center">
+            <p>The Lodge at Steele's Creek Park, Bristol, TN</p>
+          </div></div>
+          <hr class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150" />
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0 " data-taos-offset="150">
+          <p>Dress how you want!</p>
+          <br>
+          <p>
+            We will have a short ceremony and then eat food afterward. Please
+            send a text to Taylor or Andi or RSVP by filling out the google form
+            at the link below.
+          </p>
+          <br>
+          <p>
+            Food will be provided so it's important to RSVP to get an accurate
+            head count for food.
+          </p></div>
+
           <!-- Bottom CTA RSVP Button -->
           <div
-          x-data="gear()"
-          x-init="rotateGear()"
-          @mouseover="startRotation();"
-          @mouseleave="endRotation()"
-          class="relative w-full flex flex-col items-center"
-        >
-          <img
-            class="h-[200px] w-auto justify-self-center"
-            src="images/gear.svg"
-            :class="gearClass"
-          />
-          <a
-            class="absolute inset-y-1/4 flex justify-center items-center flex-grow-0 overflow-visible"
-            href="https://forms.gle/2nyyrfMzzYb8EL4RA"
-            target="_blank"
+            class="relative w-full flex flex-col items-center transition hover:scale-110"
           >
-            <button
-              class="bg-drabDarkBrown py-3 font-styleScript text-5xl text-isabelline bg-opacity-80 hover:bg-delftBlue hover:bg-opacity-80 transition-all duration-500 flex justify-center items-center leading-none skew-x-[-20deg]"
-              style="
-                border-radius: 0.5rem;
-                padding-left: 5rem;
-                padding-right: 5rem;
-              "
+            <img
+              class="h-[200px] w-auto justify-self-center rotate-gear"
+              src="images/gear.svg"
+            />
+            <a
+              class="absolute inset-y-1/4 flex justify-center items-center flex-grow-0 overflow-visible"
+              href="https://forms.gle/2nyyrfMzzYb8EL4RA"
+              target="_blank"
             >
-              RSVP
-            </button></a
-          >
-        </div>
+              <button
+                class="bg-drabDarkBrown py-3 font-styleScript text-5xl text-isabelline bg-opacity-80 hover:bg-delftBlue hover:bg-opacity-80 transition-all duration-500 flex justify-center items-center leading-none skew-x-[-20deg]"
+                style="
+                  border-radius: 0.5rem;
+                  padding-left: 5rem;
+                  padding-right: 5rem;
+                "
+              >
+                RSVP
+              </button></a
+            >
+          </div>
         </div>
         <p>
-          When you arrive at the park, let them know at the gat that you are
-          here for the weeding. The fee is covered. Park in one of the lots near
+          When you arrive at the park, let them know at the gate that you are
+          here for the wedding. The fee is covered. Park in one of the lots near
           the Lodge on the left. You can also pull down to the Lodge if you want
           to avoid walking up the hill.
         </p>
@@ -267,35 +311,8 @@
             },
           };
         };
-
-        const gear = () => {
-          return {
-            angle: 0,
-            gearClass: `rotate-[(${this.angle}deg)]`,
-            timeInterval: 10000,
-            rotateGear() {
-              const rotation = window.setInterval(() => {
-                console.log(this.timeInterval);
-                if (this.angle === 359) {
-                  this.angle = 0;
-                } else {
-                  this.angle++;
-                }
-                console.log(this.angle);
-              }, this.timeInterval);
-            },
-            startRotation() {
-              this.timeInterval = 100;
-              console.log(this.timeInterval);
-            },
-            endRotation() {
-              console.log("STOP YOU FOOL");
-              this.timeInterval = 10000;
-              console.log(this.timeInterval);
-            },
-          };
-        };
       </script>
     </div>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   </body>
 </html>
